@@ -2,14 +2,14 @@
   "name": "wenprise/shortcodes",
   "description": "Add shortcodes to output loop content in wordpress template.",
   "require": {
-    "php": ">=5.6"
+    "php": ">=5.6",
+    "wenprise/theme-helper": "^0.2.0@beta",
+    "wenprise/template-render": "^0.3.0@beta"
   },
   "autoload": {
-    "psr-4": {
-      "Wenprise\\": "src/"
-    },
     "files": [
-      "src/init.php"
+      "src/element.php",
+      "src/loop.php"
     ]
   },
   "license": "MIT",
@@ -19,5 +19,5 @@
       "email": "iwillhappy1314@gmail.com"
     }
   ],
-  "minimum-stability": "stable"
+  "minimum-stability": "beta"
 }
