@@ -3,8 +3,8 @@
   "description": "Add shortcodes to output loop content in wordpress template.",
   "require": {
     "php": ">=5.6",
-    "wenprise/theme-helper": "^0.2.0@beta",
-    "wenprise/template-render": "^0.3.0@beta"
+    "wenprise/theme-helper": "^1.0",
+    "wenprise/template-render": "^1.0"
   },
   "autoload": {
     "files": [
