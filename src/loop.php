@@ -64,7 +64,7 @@ function wprs_loop( $atts ) {
 	$wizhi_query = new \WP_Query( $args );
 
 	while ( $wizhi_query->have_posts() ) : $wizhi_query->the_post();
-		wprs_render_template( 'content', $tmp, [], '', true );
+		wprs_render_template( 'templates/loop/content', $tmp, [], '', true );
 	endwhile;
 
 	if ( $pager ) {
