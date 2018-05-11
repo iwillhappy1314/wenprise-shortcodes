@@ -178,14 +178,14 @@ add_action( 'init', function ()
 			[
 				'label' => __( 'Offset post count', 'wprs' ),
 				'attr'  => 'offset',
-				'type'  => 'text',
-				'value' => '0',
+				'type'  => 'number',
+				'value' => 0,
 			],
 			[
 				'label' => __( 'Show post count', 'wprs' ),
 				'attr'  => 'num',
-				'type'  => 'text',
-				'value' => '12',
+				'type'  => 'number',
+				'value' => 12,
 			],
 			[
 				'label' => __( 'Show term title as module heading', 'wprs' ),
@@ -195,7 +195,7 @@ add_action( 'init', function ()
 			],
 			[
 				'label'   => __( 'List Template', 'wprs' ),
-				'attr'    => 'template',
+				'attr'    => 'tmp',
 				'type'    => 'select',
 				'value'   => '',
 				'options' => wprs_data_templates( 'templates/loop' ),

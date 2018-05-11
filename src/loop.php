@@ -13,8 +13,11 @@ add_shortcode( 'wprs_loop', 'wprs_loop' );
  * @package shortcode
  *
  * @usage [loop type="post" tax="category" tag="default" num=6 pager=0 tmp="list"]
+ *
+ * @return string
  */
-function wprs_loop( $atts ) {
+function wprs_loop( $atts )
+{
 
 	$default = [
 		'type'  => 'post',
@@ -63,13 +66,17 @@ function wprs_loop( $atts ) {
 	// 输出
 	$wizhi_query = new \WP_Query( $args );
 
+	$html = '';
 	while ( $wizhi_query->have_posts() ) : $wizhi_query->the_post();
-		wprs_render_template( 'templates/loop/content', $tmp, [], '', true );
+		$html .= wprs_render_template( 'templates/loop/content', $tmp, [], '', false );
 	endwhile;
 
+	// 分页需要字符串输出方式
 	if ( $pager ) {
-		wprs_pagination( $wizhi_query );
+		$html .= wprs_pagination( $wizhi_query );
 	}
+
+	return $html;
 
 	wp_reset_postdata();
 	wp_reset_query();
