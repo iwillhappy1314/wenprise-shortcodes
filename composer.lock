@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81e53d08c56bdb07663d0448b9affaf5",
+    "content-hash": "9d0604c9d5030195f25c76a69657ebcb",
     "packages": [
         {
             "name": "latte/latte",
-            "version": "v2.4.6",
+            "version": "v2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "6d560edc49b052de6821acb48a1f438862d5b48b"
+                "reference": "f989b018ec12f9492132515cd47f83f98429c513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/6d560edc49b052de6821acb48a1f438862d5b48b",
-                "reference": "6d560edc49b052de6821acb48a1f438862d5b48b",
+                "url": "https://api.github.com/repos/nette/latte/zipball/f989b018ec12f9492132515cd47f83f98429c513",
+                "reference": "f989b018ec12f9492132515cd47f83f98429c513",
                 "shasum": ""
             },
             "require": {
@@ -76,11 +76,187 @@
                 "template",
                 "twig"
             ],
-            "time": "2017-08-29T08:24:52+00:00"
+            "time": "2018-02-06T14:42:33+00:00"
+        },
+        {
+            "name": "lightboxdigital/wp-dynamic-image-resizer",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LightboxDigital/wp-dynamic-image-resizer.git",
+                "reference": "cc1d67192c8463eba4c0920130abec933ed2296b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LightboxDigital/wp-dynamic-image-resizer/zipball/cc1d67192c8463eba4c0920130abec933ed2296b",
+                "reference": "cc1d67192c8463eba4c0920130abec933ed2296b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "wp-dynamic-image-resizer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Warren Bickley",
+                    "email": "warren@lightboxdigital.co.uk"
+                }
+            ],
+            "description": "Resize WordPress images on the fly without needing to register image sizes.",
+            "keywords": [
+                "images",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2017-01-10T18:32:16+00:00"
+        },
+        {
+            "name": "nette/finder",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/finder.git",
+                "reference": "4d43a66d072c57d585bf08a3ef68d3587f7e9547"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/finder/zipball/4d43a66d072c57d585bf08a3ef68d3587f7e9547",
+                "reference": "4d43a66d072c57d585bf08a3ef68d3587f7e9547",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^2.4 || ~3.0.0",
+                "php": ">=5.6.0"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Finder: Files Searching",
+            "homepage": "https://nette.org",
+            "time": "2017-07-10T23:47:08+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "eed59a3a5baffd431a60d4d5cd0776e246689f43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/eed59a3a5baffd431a60d4d5cd0776e246689f43",
+                "reference": "eed59a3a5baffd431a60d4d5cd0776e246689f43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize() and toAscii()",
+                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠 Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "time": "2017-07-21T18:53:58+00:00"
         },
         {
             "name": "wenprise/template-render",
-            "version": "v0.3-beta",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iwillhappy1314/wenprise-template-render.git",
@@ -117,27 +293,31 @@
         },
         {
             "name": "wenprise/theme-helper",
-            "version": "0.2-beta",
+            "version": "1.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iwillhappy1314/wenprise-theme-helper.git",
-                "reference": "de3402000514a3604c70fd97e805f69d476f3946"
+                "reference": "0553bf97b0e3bc60e39a68b47d7a73b2bd9cfb6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iwillhappy1314/wenprise-theme-helper/zipball/de3402000514a3604c70fd97e805f69d476f3946",
-                "reference": "de3402000514a3604c70fd97e805f69d476f3946",
+                "url": "https://api.github.com/repos/iwillhappy1314/wenprise-theme-helper/zipball/0553bf97b0e3bc60e39a68b47d7a73b2bd9cfb6f",
+                "reference": "0553bf97b0e3bc60e39a68b47d7a73b2bd9cfb6f",
                 "shasum": ""
             },
             "require": {
                 "latte/latte": "^2.4",
+                "lightboxdigital/wp-dynamic-image-resizer": "^1.0",
+                "nette/finder": "^2.4",
                 "php": ">=5.6"
             },
             "type": "library",
             "autoload": {
                 "psr-4": [],
                 "files": [
-                    "src/helpers.php"
+                    "src/helpers.php",
+                    "src/template-tags.php",
+                    "src/data-options.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -151,16 +331,13 @@
                 }
             ],
             "description": "Most used helper functions to develop WordPress theme.",
-            "time": "2018-01-06T11:48:21+00:00"
+            "time": "2018-05-11T03:22:00+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": {
-        "wenprise/theme-helper": 10,
-        "wenprise/template-render": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

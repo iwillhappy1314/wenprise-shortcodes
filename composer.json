@@ -9,7 +9,8 @@
   "autoload": {
     "files": [
       "src/element.php",
-      "src/loop.php"
+      "src/loop.php",
+      "src/ui.php"
     ]
   },
   "license": "MIT",
