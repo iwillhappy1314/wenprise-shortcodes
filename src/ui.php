@@ -18,32 +18,32 @@ add_action( 'init', function ()
 	}
 
 	// 显示按钮
-	shortcode_ui_register_for_shortcode( 'button', [
-		'label'         => __( 'Button', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_button', [
+		'label'         => __( 'Button', 'wprs' ),
 		'listItemImage' => 'dashicons-external',
 		'attrs'         => [
 			[
-				'label'   => __( 'Button color', 'wizhi' ),
+				'label'   => __( 'Button color', 'wprs' ),
 				'attr'    => 'type',
 				'type'    => 'select',
 				'options' => wprs_data_colors(),
 			],
 			[
-				'label'   => __( 'Button Size', 'wizhi' ),
+				'label'   => __( 'Button Size', 'wprs' ),
 				'attr'    => 'size',
 				'type'    => 'select',
 				'options' => wprs_data_sizes(),
 			],
 			[
-				'label' => __( 'Button text', 'wizhi' ),
+				'label' => __( 'Button text', 'wprs' ),
 				'attr'  => 'text',
 				'type'  => 'text',
 				'meta'  => [
-					'placeholder' => __( 'Button text', 'wizhi' ),
+					'placeholder' => __( 'Button text', 'wprs' ),
 				],
 			],
 			[
-				'label' => __( 'Button Link', 'wizhi' ),
+				'label' => __( 'Button Link', 'wprs' ),
 				'attr'  => 'url',
 				'type'  => 'url',
 				'meta'  => [
@@ -55,17 +55,17 @@ add_action( 'init', function ()
 
 
 	// 显示分割线
-	shortcode_ui_register_for_shortcode( 'divider', [
-		'label'         => __( 'Divider line', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_divider', [
+		'label'         => __( 'Divider line', 'wprs' ),
 		'listItemImage' => 'dashicons-minus',
 		'attrs'         => [
 			[
-				'label'   => __( 'Divider type', 'wizhi' ),
+				'label'   => __( 'Divider type', 'wprs' ),
 				'attr'    => 'type',
 				'type'    => 'select',
 				'options' => [
-					'solid'  => __( 'Solid', 'wizhi' ),
-					'shadow' => __( 'Shadow', 'wizhi' ),
+					'solid'  => __( 'Solid', 'wprs' ),
+					'shadow' => __( 'Shadow', 'wprs' ),
 				],
 			],
 		],
@@ -73,25 +73,25 @@ add_action( 'init', function ()
 
 
 	// 显示内容标题
-	shortcode_ui_register_for_shortcode( 'heading', [
-			'label'         => __( 'Heading', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_heading', [
+			'label'         => __( 'Heading', 'wprs' ),
 			'listItemImage' => 'dashicons-editor-bold',
 			'attrs'         => [
 				[
-					'label'   => __( 'Heading type', 'wizhi' ),
+					'label'   => __( 'Heading type', 'wprs' ),
 					'attr'    => 'type',
 					'type'    => 'select',
 					'options' => [
-						'background' => __( 'With background', 'wizhi' ),
-						'border'     => __( 'With border', 'wizhi' ),
+						'background' => __( 'With background', 'wprs' ),
+						'border'     => __( 'With border', 'wprs' ),
 					],
 				],
 				[
-					'label' => __( 'Heading text', 'wizhi' ),
+					'label' => __( 'Heading text', 'wprs' ),
 					'attr'  => 'content',
 					'type'  => 'text',
 					'meta'  => [
-						'placeholder' => __( 'Please enter heading text', 'wizhi' ),
+						'placeholder' => __( 'Please enter heading text', 'wprs' ),
 					],
 				],
 			],
@@ -101,22 +101,22 @@ add_action( 'init', function ()
 
 
 	// 显示提示信息
-	shortcode_ui_register_for_shortcode( 'alert', [
-		'label'         => __( 'Alert', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_alert', [
+		'label'         => __( 'Alert', 'wprs' ),
 		'listItemImage' => 'dashicons-info',
 		'attrs'         => [
 			[
-				'label'   => __( 'Alert type', 'wizhi' ),
+				'label'   => __( 'Alert type', 'wprs' ),
 				'attr'    => 'type',
 				'type'    => 'select',
 				'options' => wprs_data_colors(),
 			],
 			[
-				'label' => __( 'Alert content', 'wizhi' ),
+				'label' => __( 'Alert content', 'wprs' ),
 				'attr'  => 'content',
 				'type'  => 'textarea',
 				'meta'  => [
-					'placeholder' => __( 'Please enter alert content', 'wizhi' ),
+					'placeholder' => __( 'Please enter alert content', 'wprs' ),
 				],
 			],
 		],
@@ -124,24 +124,24 @@ add_action( 'init', function ()
 
 
 	// 创建显示页面内容UI
-	shortcode_ui_register_for_shortcode( 'content', [
-		'label'         => __( 'Page content', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_content', [
+		'label'         => __( 'Page content', 'wprs' ),
 		'listItemImage' => 'dashicons-media-document',
 		'attrs'         => [
 			[
-				'label' => __( 'Page ID', 'wizhi' ),
+				'label' => __( 'Page ID', 'wprs' ),
 				'attr'  => 'id',
 				'type'  => 'post_select',
 				'query' => [ 'post_type' => 'page' ],
 			],
 			[
-				'label' => __( 'Show text count', 'wizhi' ),
+				'label' => __( 'Show text count', 'wprs' ),
 				'attr'  => 'cont',
 				'type'  => 'text',
 				'value' => '120',
 			],
 			[
-				'label' => __( 'Show more link', 'wizhi' ),
+				'label' => __( 'Show more link', 'wprs' ),
 				'attr'  => 'more',
 				'type'  => 'checkbox',
 				'value' => true,
@@ -151,246 +151,54 @@ add_action( 'init', function ()
 
 
 	// 创建文章列表UI
-	shortcode_ui_register_for_shortcode( 'list', [
-		'label'         => __( 'Post title list', 'wizhi' ),
+	shortcode_ui_register_for_shortcode( 'wprs_loop', [
+		'label'         => __( 'Post title list', 'wprs' ),
 		'listItemImage' => 'dashicons-media-text',
 		'attrs'         => [
 			[
-				'label'   => __( 'Post type', 'wizhi' ),
+				'label'   => __( 'Post type', 'wprs' ),
 				'attr'    => 'type',
 				'type'    => 'select',
 				'value'   => 'post',
 				'options' => wprs_data_post_types(),
 			],
 			[
-				'label'   => __( 'Taxonomy', 'wizhi' ),
+				'label'   => __( 'Taxonomy', 'wprs' ),
 				'attr'    => 'tax',
 				'type'    => 'select',
 				'value'   => 'category',
 				'options' => wprs_data_taxonomies(),
 			],
 			[
-				'label' => __( 'Term', 'wizhi' ),
+				'label' => __( 'Term', 'wprs' ),
 				'attr'  => 'tag',
 				'type'  => 'text',
 				'value' => 'default',
 			],
 			[
-				'label' => __( 'Offset post count', 'wizhi' ),
+				'label' => __( 'Offset post count', 'wprs' ),
 				'attr'  => 'offset',
 				'type'  => 'text',
 				'value' => '0',
 			],
 			[
-				'label' => __( 'Show post count', 'wizhi' ),
+				'label' => __( 'Show post count', 'wprs' ),
 				'attr'  => 'num',
 				'type'  => 'text',
 				'value' => '12',
 			],
 			[
-				'label' => __( 'Show title text count', 'wizhi' ),
-				'attr'  => 'cut',
-				'type'  => 'text',
-				'value' => '14',
-			],
-			[
-				'label' => __( 'Show term title as module heading', 'wizhi' ),
+				'label' => __( 'Show term title as module heading', 'wprs' ),
 				'attr'  => 'heading',
 				'type'  => 'checkbox',
 				'value' => true,
 			],
 			[
-				'label' => __( 'Show post datetime', 'wizhi' ),
-				'attr'  => 'time',
-				'type'  => 'checkbox',
-				'value' => false,
-			],
-		],
-	] );
-
-
-	// 创建图片列表UI
-	shortcode_ui_register_for_shortcode( 'media', [
-		'label'         => __( 'Media list', 'wizhi' ),
-		'listItemImage' => 'dashicons-welcome-widgets-menus',
-		'attrs'         => [
-			[
-				'label'   => __( 'Post type', 'wizhi' ),
-				'attr'    => 'type',
+				'label'   => __( 'List Template', 'wprs' ),
+				'attr'    => 'template',
 				'type'    => 'select',
-				'value'   => 'post',
-				'options' => wprs_data_post_types(),
-			],
-			[
-				'label'   => __( 'Taxonomy', 'wizhi' ),
-				'attr'    => 'tax',
-				'type'    => 'select',
-				'value'   => 'category',
-				'options' => wprs_data_taxonomies(),
-			],
-			[
-				'label' => __( 'Term', 'wizhi' ),
-				'attr'  => 'tag',
-				'type'  => 'text',
-				'value' => 'default',
-			],
-			[
-				'label'   => __( 'Thumbnail size', 'wizhi' ),
-				'attr'    => 'thumbs',
-				'type'    => 'select',
-				'value'   => 'thumbnail',
-				'options' => wprs_data_image_sizes(),
-			],
-			[
-				'label'   => __( 'Thumbnail position', 'wizhi' ),
-				'attr'    => 'position',
-				'type'    => 'select',
-				'options' => [
-					'left'  => __( 'Left', 'wizhi' ),
-					'top'   => __( 'Top', 'wizhi' ),
-					'right' => __( 'Right', 'wizhi' ),
-				],
-			],
-			[
-				'label' => __( 'Show post count', 'wizhi' ),
-				'attr'  => 'num',
-				'type'  => 'text',
-				'value' => '12',
-			],
-			[
-				'label' => __( 'Show title text count', 'wizhi' ),
-				'attr'  => 'cut',
-				'type'  => 'text',
-				'value' => '14',
-			],
-			[
-				'label' => __( 'Show Content text count', 'wizhi' ),
-				'attr'  => 'content',
-				'type'  => 'text',
-				'value' => '200',
-			],
-			[
-				'label' => __( 'Show term title as module heading', 'wizhi' ),
-				'attr'  => 'heading',
-				'type'  => 'checkbox',
-				'value' => true,
-			],
-			[
-				'label' => __( 'Addon CSS class name', 'wizhi' ),
-				'attr'  => 'class',
-				'type'  => 'text',
-				'value' => '',
-				'meta'  => [
-					'placeholder' => '',
-				],
-			],
-		],
-	] );
-
-
-	// 创建幻灯UI
-	shortcode_ui_register_for_shortcode( 'slider', [
-		'label'         => __( 'Slider', 'wizhi' ),
-		'listItemImage' => 'dashicons-slides',
-		'attrs'         => [
-			[
-				'label'   => __( 'Post type', 'wizhi' ),
-				'attr'    => 'type',
-				'type'    => 'select',
-				'value'   => 'post',
-				'options' => wprs_data_post_types(),
-			],
-			[
-				'label'   => __( 'Taxonomy', 'wizhi' ),
-				'attr'    => 'tax',
-				'type'    => 'select',
-				'value'   => 'category',
-				'options' => wprs_data_taxonomies(),
-			],
-			[
-				'label' => __( 'Term', 'wizhi' ),
-				'attr'  => 'tag',
-				'type'  => 'text',
-				'value' => 'default',
-			],
-			[
-				'label'   => __( 'Thumbnail size', 'wizhi' ),
-				'attr'    => 'thumbs',
-				'type'    => 'select',
-				'value'   => 'thumbnail',
-				'options' => wprs_data_image_sizes(),
-			],
-			[
-				'label' => __( 'Show post count', 'wizhi' ),
-				'attr'  => 'num',
-				'type'  => 'text',
-				'value' => '12',
-			],
-			[
-				'label' => __( 'Show title text count', 'wizhi' ),
-				'attr'  => 'cut',
-				'type'  => 'text',
-				'value' => '14',
-			],
-			[
-				'label' => __( 'Show Content text count', 'wizhi' ),
-				'attr'  => 'content',
-				'type'  => 'text',
-				'value' => '200',
-			],
-			[
-				'label' => __( 'Slider mode', 'wizhi' ),
-				'attr'  => 'mode',
-				'type'  => 'text',
-				'value' => 'horizontal',
-			],
-			[
-				'label' => __( 'Slider speed', 'wizhi' ),
-				'attr'  => 'speed',
-				'type'  => 'text',
-				'value' => '500',
-			],
-			[
-				'label' => __( 'Auto play', 'wizhi' ),
-				'attr'  => 'auto',
-				'type'  => 'checkbox',
-				'value' => true,
-			],
-			[
-				'label' => __( 'Pause on mouse hover', 'wizhi' ),
-				'attr'  => 'autohover',
-				'type'  => 'checkbox',
-				'value' => true,
-			],
-			[
-				'label' => __( 'Minimum slider count', 'wizhi' ),
-				'attr'  => 'minslides',
-				'type'  => 'text',
-				'value' => '1',
-			],
-			[
-				'label' => __( 'Maximum slider count', 'wizhi' ),
-				'attr'  => 'maxslides',
-				'type'  => 'text',
-				'value' => '1',
-			],
-			[
-				'label' => __( 'Slider width', 'wizhi' ),
-				'attr'  => 'slidewidth',
-				'type'  => 'text',
-				'value' => '360',
-			],
-			[
-				'label' => __( 'Slider margin', 'wizhi' ),
-				'attr'  => 'slidewargin',
-				'type'  => 'text',
-				'value' => '10',
-			],
-			[
-				'label' => __( 'Animation', 'wizhi' ),
-				'attr'  => 'easing',
-				'type'  => 'text',
-				'value' => 'swing',
+				'value'   => '',
+				'options' => wprs_data_templates( 'templates/loop' ),
 			],
 		],
 	] );
