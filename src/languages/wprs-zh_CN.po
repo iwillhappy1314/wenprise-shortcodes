@@ -1,0 +1,204 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wenprise Shortcode 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2018-05-11 15:08+0800\n"
+"PO-Revision-Date: 2018-05-11 15:10+0800\n"
+"Last-Translator: Amos Lee <iwillhappy1314@gmail.com>\n"
+"Language-Team: Amos Lee\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: __;_\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ui.php:22
+msgid "Button"
+msgstr "按钮"
+
+#: ui.php:26
+msgid "Button color"
+msgstr "按钮颜色"
+
+#: ui.php:32
+msgid "Button Size"
+msgstr "按钮尺寸"
+
+#: ui.php:38 ui.php:42
+msgid "Button text"
+msgstr "按钮文本"
+
+#: ui.php:46
+msgid "Button Link"
+msgstr "按钮链接"
+
+#: ui.php:59
+msgid "Divider line"
+msgstr "分隔线"
+
+#: ui.php:63
+msgid "Divider type"
+msgstr "分隔线类型"
+
+#: ui.php:67
+msgid "Solid"
+msgstr "实线"
+
+#: ui.php:68
+msgid "Shadow"
+msgstr "投影"
+
+#: ui.php:77
+msgid "Heading"
+msgstr "标题"
+
+#: ui.php:81
+msgid "Heading type"
+msgstr "标题类型"
+
+#: ui.php:85
+msgid "With background"
+msgstr "带背景"
+
+#: ui.php:86
+msgid "With border"
+msgstr "带边框"
+
+#: ui.php:90
+msgid "Heading text"
+msgstr "标题文字"
+
+#: ui.php:94
+msgid "Please enter heading text"
+msgstr "请输入标题文本"
+
+#: ui.php:105
+msgid "Alert"
+msgstr "提示框"
+
+#: ui.php:109
+msgid "Alert type"
+msgstr "提示框类型"
+
+#: ui.php:115
+msgid "Alert content"
+msgstr "提示框内容"
+
+#: ui.php:119
+msgid "Please enter alert content"
+msgstr "请输入提示内容"
+
+#: ui.php:128
+msgid "Page content"
+msgstr "页面内容"
+
+#: ui.php:132
+msgid "Page ID"
+msgstr "页面 ID"
+
+#: ui.php:138
+msgid "Show text count"
+msgstr "显示文本字数"
+
+#: ui.php:144
+msgid "Show more link"
+msgstr "显示更多链接"
+
+#: ui.php:155
+msgid "Post title list"
+msgstr "文章标题列表"
+
+#: ui.php:159
+msgid "Post type"
+msgstr "文章类型"
+
+#: ui.php:166
+msgid "Taxonomy"
+msgstr "分类法"
+
+#: ui.php:173
+msgid "Term"
+msgstr "分类项目"
+
+#: ui.php:179
+msgid "Offset post count"
+msgstr "跳过文章数量"
+
+#: ui.php:185
+msgid "Show post count"
+msgstr "显示的文章数量"
+
+#: ui.php:191
+msgid "Show term title as module heading"
+msgstr "显示分类项目名称作为模块标题"
+
+#: ui.php:197
+msgid "List Template"
+msgstr "循环模板名称"
+
+#~ msgid "Add New %s"
+#~ msgstr "添加%s"
+
+# @ _s
+#~ msgid "Edit %s"
+#~ msgstr "编辑%s"
+
+#~ msgid "New %s"
+#~ msgstr "添加%s"
+
+#~ msgid "All %s"
+#~ msgstr "所有%s"
+
+#~ msgid "View %s"
+#~ msgstr "查看%s"
+
+#~ msgid "Search %s"
+#~ msgstr "搜索%s"
+
+#~ msgid "Could not find %s"
+#~ msgstr "找不到%s"
+
+#~ msgid "Could not find %s in trash"
+#~ msgstr "回收站中没有%s"
+
+#~ msgid "Upgrade %s"
+#~ msgstr "更新 %s"
+
+#~ msgid "Parent %s"
+#~ msgstr "父级%s"
+
+#~ msgid "Popular %s"
+#~ msgstr "热门%s"
+
+#~ msgid "Separate %s with commas"
+#~ msgstr "使用 %s 分隔"
+
+#~ msgid "Add or remove %s"
+#~ msgstr "添加或删除%s"
+
+#~ msgid "Choose from the most used %s"
+#~ msgstr "从最常用的 %s 选择"
+
+#~ msgid "No %s found."
+#~ msgstr "没有找到%s"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "%1$s"
+#~ msgstr "%1$s"
+
+#~ msgid "Archives"
+#~ msgstr "归档"
+
+#~ msgid "Home"
+#~ msgstr "首页 "
+
+#~ msgid "Add a menu"
+#~ msgstr "添加菜单"

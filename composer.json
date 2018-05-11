@@ -10,7 +10,8 @@
     "files": [
       "src/element.php",
       "src/loop.php",
-      "src/ui.php"
+      "src/ui.php",
+      "src/languages.php"
     ]
   },
   "license": "MIT",
