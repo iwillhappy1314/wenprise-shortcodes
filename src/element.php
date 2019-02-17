@@ -27,6 +27,7 @@ function wprs_divider( $atts ) {
 
 	if ( $type ) {
 		$class .= ' ui-divider-' . $type;
+		$class .= ' c-divider--' . $type;
 	}
 
 	// 输出
@@ -60,6 +61,7 @@ function wprs_heading( $atts ) {
 
 	if ( $type ) {
 		$class .= ' ui-heading-' . $type;
+		$class .= ' c-heading--' . $type;
 	}
 
 	// 输出
@@ -93,6 +95,8 @@ function wprs_alert( $atts ) {
 
 	if ( $type ) {
 		$class .= ' alert-' . $type;
+		$class .= ' alert--' . $type;
+		$class .= ' c-alert--' . $type;
 	}
 
 	// 输出
@@ -128,10 +132,12 @@ function wprs_button( $atts ) {
 
 	if ( $type ) {
 		$class .= ' btn-' . $type;
+		$class .= ' btn--' . $type;
 	}
 
 	if ( $size ) {
 		$class .= ' btn-' . $size;
+		$class .= ' btn--' . $size;
 	}
 
 	// 输出
