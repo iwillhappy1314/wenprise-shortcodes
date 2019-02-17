@@ -133,11 +133,13 @@ function wprs_button( $atts ) {
 	if ( $type ) {
 		$class .= ' btn-' . $type;
 		$class .= ' btn--' . $type;
+		$class .= ' button--' . $type;
 	}
 
 	if ( $size ) {
 		$class .= ' btn-' . $size;
 		$class .= ' btn--' . $size;
+		$class .= ' button--' . $size;
 	}
 
 	// 输出
