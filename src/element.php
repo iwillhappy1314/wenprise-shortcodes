@@ -4,8 +4,10 @@
  * Wizhi CMS 插件使用的简码
  */
 
+use Nette\Utils\Html;
 
-add_shortcode( 'wprs_divider', 'wprs_divider' );
+
+add_shortcode('wprs_divider', 'wprs_divider');
 /**
  * 显示几种不同类型的分割线
  *
@@ -17,28 +19,29 @@ add_shortcode( 'wprs_divider', 'wprs_divider' );
  *
  * @return string 经简码格式化后的 HTML 字符串
  */
-function wprs_divider( $atts ) {
-	$default = [
-		'type' => 'solid',
-	];
-	extract( shortcode_atts( $default, $atts ) );
+function wprs_divider($atts)
+{
+    $default = [
+        'type' => 'solid',
+    ];
+    extract(shortcode_atts($default, $atts));
 
-	$class = 'ui-divider';
+    $class = 'ui-divider';
 
-	if ( $type ) {
-		$class .= ' ui-divider-' . $type;
-		$class .= ' c-divider--' . $type;
-	}
+    if ($type) {
+        $class .= ' ui-divider-' . $type;
+        $class .= ' c-divider--' . $type;
+    }
 
-	// 输出
-	$html = '';
-	$html .= '<div class="' . $class . '"></div>';
+    // 输出
+    $html = '';
+    $html .= '<div class="' . $class . '"></div>';
 
-	return $html;
+    return $html;
 }
 
 
-add_shortcode( 'wprs_heading', 'wprs_heading' );
+add_shortcode('wprs_heading', 'wprs_heading');
 /**
  * 显示几种不同类型的分割线
  *
@@ -50,29 +53,30 @@ add_shortcode( 'wprs_heading', 'wprs_heading' );
  *
  * @return string 经简码格式化后的 HTML 字符串
  */
-function wprs_heading( $atts ) {
-	$default = [
-		'type'    => 'background',
-		'content' => '这是二级标题',
-	];
-	extract( shortcode_atts( $default, $atts ) );
+function wprs_heading($atts)
+{
+    $default = [
+        'type'    => 'background',
+        'content' => '这是二级标题',
+    ];
+    extract(shortcode_atts($default, $atts));
 
-	$class = 'ui-heading';
+    $class = 'ui-heading';
 
-	if ( $type ) {
-		$class .= ' ui-heading-' . $type;
-		$class .= ' c-heading--' . $type;
-	}
+    if ($type) {
+        $class .= ' ui-heading-' . $type;
+        $class .= ' c-heading--' . $type;
+    }
 
-	// 输出
-	$html = '';
-	$html .= '<h2 class="' . $class . '">' . $content . '</h2>';
+    // 输出
+    $html = '';
+    $html .= '<h2 class="' . $class . '">' . $content . '</h2>';
 
-	return $html;
+    return $html;
 }
 
 
-add_shortcode( 'wprs_alert', 'wprs_alert' );
+add_shortcode('wprs_alert', 'wprs_alert');
 /**
  * 显示几种不同类型的分割线
  *
@@ -84,30 +88,31 @@ add_shortcode( 'wprs_alert', 'wprs_alert' );
  *
  * @return string 经简码格式化后的 HTML 字符串
  */
-function wprs_alert( $atts ) {
-	$default = [
-		'type'    => 'info',
-		'content' => '这是提示信息。',
-	];
-	extract( shortcode_atts( $default, $atts ) );
+function wprs_alert($atts)
+{
+    $default = [
+        'type'    => 'info',
+        'content' => '这是提示信息。',
+    ];
+    extract(shortcode_atts($default, $atts));
 
-	$class = 'alert';
+    $class = 'alert';
 
-	if ( $type ) {
-		$class .= ' alert-' . $type;
-		$class .= ' alert--' . $type;
-		$class .= ' c-alert--' . $type;
-	}
+    if ($type) {
+        $class .= ' alert-' . $type;
+        $class .= ' alert--' . $type;
+        $class .= ' c-alert--' . $type;
+    }
 
-	// 输出
-	$html = '';
-	$html .= '<div class="' . $class . '">' . $content . '</div>';
+    // 输出
+    $html = '';
+    $html .= '<div class="' . $class . '">' . $content . '</div>';
 
-	return $html;
+    return $html;
 }
 
 
-add_shortcode( 'wprs_button', 'wprs_button' );
+add_shortcode('wprs_button', 'wprs_button');
 /**
  * 显示链接按钮
  *
@@ -119,32 +124,40 @@ add_shortcode( 'wprs_button', 'wprs_button' );
  *
  * @return string 经简码格式化后的 HTML 字符串
  */
-function wprs_button( $atts ) {
-	$default = [
-		'type' => 'success',
-		'size' => '',
-		'text' => '这是链接',
-		'url'  => 'http://',
-	];
-	extract( shortcode_atts( $default, $atts ) );
+function wprs_button($atts)
+{
+    $default = [
+        'type'   => 'success',
+        'size'   => '',
+        'text'   => '这是链接',
+        'url'    => 'http://',
+        'target' => '_blank',
+    ];
 
-	$class = 'btn';
+    $merged_attrs = shortcode_atts($default, $atts);
+    $html_attrs = array_except($merged_attrs, ['type', 'size', 'url', 'text']);
 
-	if ( $type ) {
-		$class .= ' btn-' . $type;
-		$class .= ' btn--' . $type;
-		$class .= ' button--' . $type;
-	}
+    extract($merged_attrs);
 
-	if ( $size ) {
-		$class .= ' btn-' . $size;
-		$class .= ' btn--' . $size;
-		$class .= ' button--' . $size;
-	}
+    $class = 'btn button';
 
-	// 输出
-	$html = '';
-	$html .= '<a target="_blank" class="' . $class . '" href="' . $url . '">' . $text . '</a>';
+    if ($type) {
+        $class .= ' btn-' . $type;
+        $class .= ' btn--' . $type;
+        $class .= ' button--' . $type;
+    }
 
-	return $html;
+    if ($size) {
+        $class .= ' btn-' . $size;
+        $class .= ' btn--' . $size;
+        $class .= ' button--' . $size;
+    }
+
+    $el = Html::el('a')
+              ->href($url)
+              ->setAttribute('class', $class)
+              ->addAttributes($html_attrs)
+              ->addText($text);
+
+    return $el;
 }
