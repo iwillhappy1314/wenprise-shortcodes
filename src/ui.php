@@ -34,6 +34,14 @@ add_action( 'init', function ()
 				'type'    => 'select',
 				'options' => wprs_data_sizes(),
 			],
+            [
+                'label' => __( 'Rel', 'wprs' ),
+                'attr'  => 'rel',
+                'type'  => 'text',
+                'meta'  => [
+                    'placeholder' => __( 'nofollow', 'wprs' ),
+                ],
+            ],
 			[
 				'label' => __( 'Button text', 'wprs' ),
 				'attr'  => 'text',
