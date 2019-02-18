@@ -33,9 +33,9 @@ function wprs_divider($atts)
         $class .= ' c-divider--' . $type;
     }
 
-    // 输出
-    $html = '';
-    $html .= '<div class="' . $class . '"></div>';
+    $html = Html::el('div')
+                ->setAttribute('class', $class)
+                ->addText($content);
 
     return $html;
 }
@@ -69,8 +69,9 @@ function wprs_heading($atts)
     }
 
     // 输出
-    $html = '';
-    $html .= '<h2 class="' . $class . '">' . $content . '</h2>';
+    $html = Html::el('h2')
+                ->setAttribute('class', $class)
+                ->addText($content);
 
     return $html;
 }
@@ -94,6 +95,7 @@ function wprs_alert($atts)
         'type'    => 'info',
         'content' => '这是提示信息。',
     ];
+
     extract(shortcode_atts($default, $atts));
 
     $class = 'alert';
@@ -104,9 +106,9 @@ function wprs_alert($atts)
         $class .= ' c-alert--' . $type;
     }
 
-    // 输出
-    $html = '';
-    $html .= '<div class="' . $class . '">' . $content . '</div>';
+    $html = Html::el('div')
+                ->setAttribute('class', $class)
+                ->addHtml($content);
 
     return $html;
 }
@@ -135,7 +137,7 @@ function wprs_button($atts)
     ];
 
     $merged_attrs = shortcode_atts($default, $atts);
-    $html_attrs = array_except($merged_attrs, ['type', 'size', 'url', 'text']);
+    $html_attrs   = array_except($merged_attrs, ['type', 'size', 'url', 'text']);
 
     extract($merged_attrs);
 
