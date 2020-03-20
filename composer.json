@@ -8,11 +8,11 @@
     "nette/utils": "^3.0@RC"
   },
   "autoload": {
+    "psr-4": {
+      "Wenprise\\": "src/"
+    },
     "files": [
-      "src/element.php",
-      "src/loop.php",
-      "src/ui.php",
-      "src/languages.php"
+      "src/init.php"
     ]
   },
   "license": "MIT",
